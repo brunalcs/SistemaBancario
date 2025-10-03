@@ -5,10 +5,10 @@ public abstract class Conta {
 	String cliente;
 	double saldo; 
 	
-	public Conta(int numero, String cliente, double saldo){
+	public Conta(int numero, String cliente){
 		this.numero=numero;
 		this.cliente=cliente;
-		this.saldo=saldo;
+		this.saldo=0.0;
 	}
 	
 	public void depositar(double valor) {
@@ -23,7 +23,7 @@ public abstract class Conta {
 	
 	public abstract boolean sacar(double valor);
 	
-	public abstract boolean transferir(double valor);
+	public abstract boolean transferir(double valor,Conta destino);
 	
 	
 	
